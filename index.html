@@ -21,15 +21,30 @@
     <nav class="nav">
       <a href="#lesson">الشرح</a><a href="#journey">مراحل التحدي</a><a href="#badges">الشارات</a>
     </nav>
+    <div class="top-user" id="topUser" hidden><span>👤</span><strong id="studentNameLabel"></strong></div>
     <div class="top-score"><span>⭐</span><strong id="headerPoints">٠</strong><small>نقطة</small></div>
   </header>
 
-  <main>
+  <div class="welcome-overlay" id="welcomeOverlay" role="dialog" aria-modal="true" aria-labelledby="welcomeTitle">
+    <form class="welcome-card" id="welcomeForm">
+      <div class="welcome-emblem">ض</div>
+      <span class="section-kicker">أهلاً بك في رحلة المعرفة</span>
+      <h2 id="welcomeTitle">ما اسم بطل رحلتنا اليوم؟</h2>
+      <p>اكتب اسمك لنحفظ تقدمك ونناديك به أثناء مغامرتك في عالم الضاد.</p>
+      <label for="studentNameInput">اسم الطالب</label>
+      <input id="studentNameInput" name="studentName" type="text" maxlength="30" autocomplete="given-name" placeholder="اكتب اسمك هنا" required>
+      <button class="btn btn-gold" type="submit">ابدأ الرحلة ✨</button>
+      <small>سيُحفظ الاسم والتقدم على هذا المتصفح.</small>
+    </form>
+  </div>
+
+  <main id="siteMain" class="site-locked">
     <section class="hero" id="home">
       <div class="hero-copy">
         <div class="eyebrow"><span class="spark">✦</span> الصف الأول الإعدادي · الفصل الدراسي الأول</div>
         <h1>افتح كتابك…<br><em>وانطلق في عالم الضاد!</em></h1>
         <p>رحلة ممتعة بين القواعد والأمثلة والتحديات. تعلّم، اجمع النقاط، وافتح شارات التميز.</p>
+        <div class="welcome-inline" id="welcomeInline" aria-live="polite"></div>
         <div class="hero-actions">
           <a class="btn btn-gold" href="#lesson">ابدأ رحلة التعلم <span>←</span></a>
           <a class="btn btn-ghost" href="#badges">اكتشف الشارات</a>
